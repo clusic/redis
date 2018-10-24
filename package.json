@@ -1,0 +1,28 @@
+{
+  "name": "@clusic/redis",
+  "version": "1.0.0",
+  "description": "The redis plugin of clusic",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/clusic/redis.git"
+  },
+  "keywords": [
+    "redis",
+    "clusic"
+  ],
+  "plugin": {
+    "framework": "@clusic/rex",
+    "dependencies": [
+      "@clusic/catch"
+    ]
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clusic/redis/issues"
+  },
+  "homepage": "https://github.com/clusic/redis#readme",
+  "dependencies": {
+    "ioredis": "^4.2.0",
+    "redis-commands": "^1.4.0"
+  }
+}
