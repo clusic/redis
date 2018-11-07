@@ -10,7 +10,7 @@ module.exports = async (app, plugin) => {
     Object.defineProperty(ctx, config.contextName || 'redis', {
       get() { return redisContext; }
     });
-    redisContext.on('begin', async () => ctx.Rollback(async () => await redisContext.rollback()));
+    redisContext.on('begin', async () => ctx.onErrorCatch(async () => await redisContext.rollback()));
     await next();
     await redisContext.commit();
   });
